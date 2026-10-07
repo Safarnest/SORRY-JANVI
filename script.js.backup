@@ -1,0 +1,744 @@
+const app = document.getElementById("app");
+
+app.innerHTML = `
+  <!-- =====================================================
+       OPENING
+  ====================================================== -->
+
+  <section class="opening" id="opening">
+
+    <div class="opening-noise"></div>
+    <div class="opening-light"></div>
+
+    <div class="opening-content">
+
+      <p class="opening-kicker">
+        A LITTLE SOMETHING FROM BUGGU
+      </p>
+
+      <div class="brand-lockup">
+
+        <h1>BUGGU</h1>
+
+        <div class="brand-cross">×</div>
+
+        <h1>BUGGI</h1>
+
+      </div>
+
+      <p class="relationship">
+        Mendak · Chipkali
+      </p>
+
+      <div class="opening-rule"></div>
+
+      <p class="opening-description">
+        Kuch baatein kehne ke liye
+        kabhi-kabhi words se zyada
+        dil ki zarurat hoti hai.
+      </p>
+
+      <button class="opening-button" id="beginBtn">
+        <span>Open my heart</span>
+        <span class="button-arrow">→</span>
+      </button>
+
+    </div>
+
+    <div class="opening-footer">
+      <span>01</span>
+      <span>FOR JANVI</span>
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       FIRST LETTER — THE SITUATION
+  ====================================================== -->
+
+  <section class="letter-section" id="letter">
+
+    <div class="letter-side-number">
+      01
+    </div>
+
+    <div class="letter-content">
+
+      <p class="section-label">
+        THE THING I NEED TO SAY FIRST
+      </p>
+
+      <div class="letter-mark">♡</div>
+
+      <h2>
+        Dear Buggi,
+      </h2>
+
+      <div class="letter-copy">
+
+        <p>
+          Maine tumse promise kiya tha ki
+          <strong>5 tareekh ko</strong>
+          Delhi se tumhe apne paas gaon le aaunga.
+        </p>
+
+        <p>
+          Maine woh promise poore dil se kiya tha.
+          Aur mujhe bahut bura lagta hai ki
+          main use poora nahi kar paaya.
+        </p>
+
+        <p>
+          Papa ne mana kar diya aur situation
+          mere control mein nahi rahi...
+          lekin sach ye hai ki
+          <strong>meri sabse badi galti woh nahi thi.</strong>
+        </p>
+
+        <p>
+          Meri galti thi ki main tumse baat karne ke
+          bajay chup ho gaya.
+        </p>
+
+        <p>
+          Mujhe tumhe explain karna chahiye tha.
+          Tumhare saath khada rehna chahiye tha.
+          Tumhe akela feel nahi karwana chahiye tha.
+        </p>
+
+      </div>
+
+      <div class="letter-signature">
+        <span>I'm sorry.</span>
+        <small>— Tumhara Buggu</small>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       MEMORIES
+  ====================================================== -->
+
+  <section class="memories-section" id="memories">
+
+    <div class="memories-heading">
+
+      <p class="section-label">
+        BEFORE I SAY MORE
+      </p>
+
+      <h2>
+        Remember us?
+      </h2>
+
+      <p>
+        Kuch tasveerein sirf tasveerein nahi hoti.
+        Woh yaad dilati hain ki hum kitne khoobsurat
+        moments saath jee chuke hain.
+      </p>
+
+    </div>
+
+
+    <div class="cinematic-memory memory-01">
+
+      <div class="memory-photo">
+        <img
+          src="./assets/photos/buggu-buggi-01.jpg"
+          alt="A memory of Buggu and Buggi"
+        />
+      </div>
+
+      <div class="memory-story">
+        <span>01</span>
+        <p>
+          Some moments don't need
+          a reason to become special.
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="cinematic-memory memory-02">
+
+      <div class="memory-photo">
+        <img
+          src="./assets/photos/buggu-buggi-02.jpg"
+          alt="A memory of Buggu and Buggi"
+        />
+      </div>
+
+      <div class="memory-story">
+        <span>02</span>
+        <p>
+          Somewhere between all the
+          laughter, you became my favourite person.
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="cinematic-memory memory-03">
+
+      <div class="memory-photo">
+        <img
+          src="./assets/photos/buggu-buggi-03.jpg"
+          alt="A memory of Buggu and Buggi"
+        />
+      </div>
+
+      <div class="memory-story">
+        <span>03</span>
+        <p>
+          You made ordinary days
+          feel a little less ordinary.
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="cinematic-memory memory-04">
+
+      <div class="memory-photo">
+        <img
+          src="./assets/photos/buggu-buggi-04.jpg"
+          alt="A memory of Buggu and Buggi"
+        />
+      </div>
+
+      <div class="memory-story">
+        <span>04</span>
+        <p>
+          And somehow, these little moments
+          became some of my favourite memories.
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="cinematic-memory memory-05">
+
+      <div class="memory-photo">
+        <img
+          src="./assets/photos/buggu-buggi-05.jpg"
+          alt="A memory of Buggu and Buggi"
+        />
+      </div>
+
+      <div class="memory-story">
+        <span>05</span>
+        <p>
+          My Buggi.
+          My favourite kind of chaos.
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="cinematic-memory memory-06">
+
+      <div class="memory-photo">
+        <img
+          src="./assets/photos/buggu-buggi-06.jpg"
+          alt="A memory of Buggu and Buggi"
+        />
+      </div>
+
+      <div class="memory-story memory-final-story">
+        <span>06</span>
+        <p>
+          If I had to choose again...
+          <strong>
+            I'd still choose you.
+          </strong>
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="memory-end">
+
+      <div class="memory-end-line"></div>
+
+      <p>
+        And that's why
+        this isn't just an apology.
+      </p>
+
+      <span>
+        There's something else I want you to read.
+      </span>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       ENVELOPE
+  ====================================================== -->
+
+  <section class="envelope-section" id="envelope">
+
+    <div class="envelope-backdrop"></div>
+
+    <div class="envelope-content">
+
+      <p class="section-label">
+        SOMETHING I COULDN'T SAY PROPERLY
+      </p>
+
+      <h2>
+        For you.
+      </h2>
+
+      <p class="envelope-intro">
+        Is baar words thode zyada hain.
+        Isliye maine unhe ek letter mein rakh diya.
+      </p>
+
+
+      <div class="envelope-scene">
+
+        <div class="paper-shadow"></div>
+
+        <div class="paper-envelope" id="envelopeBox">
+
+          <div class="envelope-back"></div>
+
+          <div class="envelope-inside"></div>
+
+          <div class="envelope-paper">
+            <span>FOR JANVI</span>
+          </div>
+
+          <div class="envelope-front-left"></div>
+          <div class="envelope-front-right"></div>
+          <div class="envelope-front-bottom"></div>
+
+          <div class="envelope-flap"></div>
+
+          <div class="wax-seal">
+            <span>J</span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <button
+        class="letter-open-button"
+        id="openLetterBtn"
+      >
+        <span>Open the letter</span>
+        <span>→</span>
+      </button>
+
+      <p class="envelope-caption">
+        Take your time.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       HEART LETTER
+  ====================================================== -->
+
+  <section class="heart-letter-section" id="heartLetter">
+
+    <div class="letter-paper-glow"></div>
+
+    <div class="heart-letter-paper">
+
+      <div class="paper-top">
+
+        <span>BUGGU × BUGGI</span>
+
+        <span>FOR JANVI</span>
+
+      </div>
+
+
+      <div class="paper-content">
+
+        <p class="handwritten-label">
+          A letter from my heart
+        </p>
+
+        <h2>
+          Meri Buggi,
+        </h2>
+
+
+        <p>
+          Pata hai, main shayad har baar apni
+          feelings sahi words mein nahi bata pata...
+          lekin tum meri life ka woh hissa ho
+          jise main sirf pyaar nahi karta,
+          balki dil se apna maanta hoon.
+        </p>
+
+
+        <p>
+          Tumhari hasi, tumhari choti-choti baatein,
+          tumhara gussa, tumhara care karna...
+          mujhe sab kuch apna sa lagta hai.
+        </p>
+
+
+        <p>
+          Tumhare saath bitaya hua waqt
+          mere liye kabhi ordinary nahi raha.
+          Shayad tumhe pata bhi nahi hai ki
+          tum meri life mein kitni important ho.
+        </p>
+
+
+        <div class="letter-emphasis">
+          I love you more than
+          I know how to explain.
+        </div>
+
+
+        <p>
+          Aur isi liye jab maine tumhe hurt kiya,
+          mujhe khud se bhi bura laga.
+        </p>
+
+
+        <p>
+          I'm sorry, Janvi.
+        </p>
+
+
+        <p>
+          Sorry sirf isliye nahi ki mujhse galti hui...
+          balki isliye ki jab tumhe meri zarurat thi,
+          main tumse baat karne ke bajay chup ho gaya.
+        </p>
+
+
+        <p>
+          Mujhe tumhe samjhana chahiye tha.
+          Tumhare saath khada rehna chahiye tha.
+          Tumhe ye feel karwana chahiye tha ki
+          chahe situation kuch bhi ho,
+          <strong>Buggu tumhare saath hai.</strong>
+        </p>
+
+
+        <p>
+          Main perfect nahi hoon.
+          Mujhse galtiyan hongi.
+        </p>
+
+
+        <p>
+          Lekin tumhare saath ek cheez
+          hamesha genuine rahegi —
+        </p>
+
+
+        <div class="letter-emphasis small-emphasis">
+          mera pyaar.
+        </div>
+
+
+        <p>
+          Main chahta hoon ki hum sirf achhe
+          moments mein nahi, balki difficult
+          moments mein bhi ek doosre ka
+          haath pakdein.
+        </p>
+
+
+        <p>
+          Agar kabhi main galat ho jaun,
+          toh mujhse naraz hona...
+          mujhe daantna...
+          lekin please mujhse baat karna.
+        </p>
+
+
+        <div class="letter-final-line">
+          Mujhse door mat jaana.
+        </div>
+
+
+        <p>
+          Tum meri Buggi ho.
+          Aur main hamesha tumhara Buggu
+          rehna chahta hoon.
+        </p>
+
+
+        <div class="love-sign">
+
+          <span>
+            I love you, Janvi.
+          </span>
+
+          <strong>
+            — Tumhara Buggu
+          </strong>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       FINAL RESPONSE
+  ====================================================== -->
+
+  <section class="response-section" id="response">
+
+    <div class="response-content">
+
+      <p class="section-label">
+        ONE LAST THING
+      </p>
+
+      <div class="response-symbol">
+        ♡
+      </div>
+
+      <h2>
+        Ab tumhari baari.
+      </h2>
+
+      <p class="response-question">
+        Kya tum apne Buggu ko maaf karogi?
+      </p>
+
+      <p class="response-description">
+        Jo bhi tum feel karti ho,
+        honestly bata dena.
+        Main tumhari baat samjhunga.
+      </p>
+
+
+      <div class="response-actions">
+
+        <button
+          class="response-primary"
+          id="yesBtn"
+        >
+          <span>Haan</span>
+          <span>→</span>
+        </button>
+
+
+        <button
+          class="response-secondary"
+          id="timeBtn"
+        >
+          Mujhe thoda time chahiye
+        </button>
+
+      </div>
+
+
+      <p class="response-sign">
+        Buggu
+      </p>
+
+    </div>
+
+  </section>
+`;
+
+
+/* =========================================================
+   OPENING
+========================================================= */
+
+const beginBtn = document.getElementById("beginBtn");
+const opening = document.getElementById("opening");
+const letter = document.getElementById("letter");
+
+if (beginBtn && opening && letter) {
+
+  beginBtn.addEventListener("click", () => {
+
+    opening.classList.add("opening-exit");
+
+    setTimeout(() => {
+
+      letter.classList.add("letter-visible");
+
+      window.scrollTo({
+        top: letter.offsetTop,
+        behavior: "smooth"
+      });
+
+    }, 700);
+
+  });
+
+}
+
+
+/* =========================================================
+   MEMORY REVEALS
+========================================================= */
+
+const memoryItems =
+  document.querySelectorAll(".cinematic-memory");
+
+
+if ("IntersectionObserver" in window) {
+
+  const memoryObserver =
+    new IntersectionObserver(
+      (entries) => {
+
+        entries.forEach((entry) => {
+
+          if (entry.isIntersecting) {
+
+            entry.target.classList.add(
+              "memory-active"
+            );
+
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.15
+      }
+    );
+
+
+  memoryItems.forEach((item) => {
+    memoryObserver.observe(item);
+  });
+
+} else {
+
+  memoryItems.forEach((item) => {
+    item.classList.add("memory-active");
+  });
+
+}
+
+
+/* =========================================================
+   ENVELOPE
+========================================================= */
+
+const openLetterBtn =
+  document.getElementById("openLetterBtn");
+
+const envelopeBox =
+  document.getElementById("envelopeBox");
+
+const heartLetter =
+  document.getElementById("heartLetter");
+
+
+if (openLetterBtn && envelopeBox && heartLetter) {
+
+  openLetterBtn.addEventListener("click", () => {
+
+    envelopeBox.classList.add(
+      "envelope-opened"
+    );
+
+    openLetterBtn.classList.add(
+      "hide-open-button"
+    );
+
+
+    setTimeout(() => {
+
+      heartLetter.classList.add(
+        "heart-letter-visible"
+      );
+
+      window.scrollTo({
+        top: heartLetter.offsetTop,
+        behavior: "smooth"
+      });
+
+    }, 1150);
+
+  });
+
+}
+
+
+/* =========================================================
+   WHATSAPP RESPONSE
+   BUGGU × BUGGI
+========================================================= */
+
+const whatsappNumber =
+  "918368875843";
+
+
+const yesBtn =
+  document.getElementById("yesBtn");
+
+const timeBtn =
+  document.getElementById("timeBtn");
+
+
+function sendWhatsAppMessage(message) {
+
+  const url =
+    `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+  window.location.href = url;
+
+}
+
+
+/* ❤️ HAAN */
+
+if (yesBtn) {
+
+  yesBtn.addEventListener("click", () => {
+
+    sendWhatsAppMessage(
+      "❤️ Haan, main apne Buggu ko maaf karti hoon. 🥺❤️\n\n— Buggi 🦎"
+    );
+
+  });
+
+}
+
+
+/* 🥺 THODA TIME */
+
+if (timeBtn) {
+
+  timeBtn.addEventListener("click", () => {
+
+    sendWhatsAppMessage(
+      "🥺 Mujhe thoda time chahiye, Buggu. Main tumhari baat samajh rahi hoon. ❤️\n\n— Buggi 🦎"
+    );
+
+  });
+
+}

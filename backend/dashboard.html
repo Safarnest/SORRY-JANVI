@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="theme-color"
+    content="#08070a"
+  >
+
+  <title>BUGGU × BUGGI — Responses</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(
+          circle at 20% 10%,
+          rgba(150, 34, 82, .22),
+          transparent 35%
+        ),
+        radial-gradient(
+          circle at 85% 80%,
+          rgba(72, 35, 101, .22),
+          transparent 38%
+        ),
+        #08070a;
+
+      color: #f7eef2;
+
+      font-family:
+        Arial,
+        sans-serif;
+
+      padding: 24px;
+    }
+
+
+    .dashboard {
+      width: 100%;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+
+    .header {
+      padding: 24px 0 30px;
+    }
+
+
+    .eyebrow {
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: #a99ca2;
+      margin-bottom: 12px;
+    }
+
+
+    h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(32px, 8vw, 54px);
+      font-weight: 400;
+      letter-spacing: -1px;
+    }
+
+
+    .subtitle {
+      margin-top: 10px;
+      color: #aaa0a5;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      margin-top: 18px;
+      padding: 8px 12px;
+
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 999px;
+
+      background: rgba(255,255,255,.04);
+
+      font-size: 11px;
+      color: #bdb2b7;
+    }
+
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #7ee0a0;
+      box-shadow:
+        0 0 12px rgba(126,224,160,.7);
+    }
+
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+
+    .stat-card {
+      padding: 18px;
+
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 18px;
+
+      background: rgba(255,255,255,.035);
+      backdrop-filter: blur(14px);
+    }
+
+
+    .stat-label {
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #8f858a;
+    }
+
+
+    .stat-value {
+      margin-top: 8px;
+      font-family: Georgia, serif;
+      font-size: 30px;
+    }
+
+
+    .responses {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+
+    .response-card {
+      padding: 20px;
+
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 20px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.055),
+          rgba(255,255,255,.025)
+        );
+
+      box-shadow:
+        0 12px 40px rgba(0,0,0,.18);
+    }
+
+
+    .response-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+
+    .response-badge {
+      display: inline-flex;
+      align-items: center;
+
+      padding: 7px 11px;
+
+      border-radius: 999px;
+
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+
+    .response-yes {
+      color: #ffdbe7;
+      background: rgba(190,48,105,.20);
+      border: 1px solid rgba(225,92,143,.30);
+    }
+
+
+    .response-time {
+      color: #d7ced3;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+    }
+
+
+    .response-number {
+      font-size: 11px;
+      color: #756c71;
+    }
+
+
+    .response-date {
+      margin-top: 15px;
+      color: #9b9096;
+      font-size: 11px;
+    }
+
+
+    .response-empty {
+      padding: 40px 20px;
+      text-align: center;
+
+      border: 1px dashed rgba(255,255,255,.12);
+      border-radius: 20px;
+
+      color: #8f858a;
+      font-size: 13px;
+    }
+
+
+    .error {
+      padding: 18px;
+
+      border-radius: 16px;
+
+      background: rgba(170,40,70,.12);
+      border: 1px solid rgba(225,92,143,.22);
+
+      color: #e7b8c7;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+
+    .footer {
+      padding: 30px 0 10px;
+
+      text-align: center;
+
+      color: #665e63;
+      font-size: 10px;
+      letter-spacing: 1.5px;
+    }
+
+
+    @media (max-width: 420px) {
+
+      body {
+        padding: 18px;
+      }
+
+      .stats {
+        gap: 8px;
+      }
+
+      .stat-card {
+        padding: 15px;
+      }
+
+      .response-card {
+        padding: 17px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+  <main class="dashboard">
+
+    <header class="header">
+
+      <p class="eyebrow">
+        PRIVATE RESPONSE
+      </p>
+
+      <h1>
+        BUGGU × BUGGI
+      </h1>
+
+      <p class="subtitle">
+        Janvi ke response ka private dashboard.
+      </p>
+
+      <div class="status">
+        <span class="status-dot"></span>
+        Local API connected
+      </div>
+
+    </header>
+
+
+    <section class="stats">
+
+      <div class="stat-card">
+
+        <p class="stat-label">
+          Total
+        </p>
+
+        <p
+          class="stat-value"
+          id="totalCount"
+        >
+          —
+        </p>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <p class="stat-label">
+          Latest
+        </p>
+
+        <p
+          class="stat-value"
+          id="latestResponse"
+        >
+          —
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section
+      class="responses"
+      id="responses"
+    >
+
+      <div class="response-empty">
+        Loading responses...
+      </div>
+
+    </section>
+
+
+    <footer class="footer">
+      BUGGU × BUGGI · PRIVATE
+    </footer>
+
+  </main>
+
+
+  <script>
+
+    const API_URL =
+      "http://127.0.0.1:4000/api/responses";
+
+
+    const responsesContainer =
+      document.getElementById(
+        "responses"
+      );
+
+
+    const totalCount =
+      document.getElementById(
+        "totalCount"
+      );
+
+
+    const latestResponse =
+      document.getElementById(
+        "latestResponse"
+      );
+
+
+    function formatDate(dateString) {
+
+      const date =
+        new Date(dateString);
+
+
+      return date.toLocaleString(
+        "en-IN",
+        {
+          day: "2-digit",
+          month: "short",
+          year: "numeric",
+          hour: "2-digit",
+          minute: "2-digit"
+        }
+      );
+
+    }
+
+
+    function createResponseCard(
+      item,
+      index
+    ) {
+
+      const isYes =
+        item.response === "Haan";
+
+
+      const card =
+        document.createElement(
+          "article"
+        );
+
+
+      card.className =
+        "response-card";
+
+
+      const badgeClass =
+        isYes
+          ? "response-yes"
+          : "response-time";
+
+
+      const badgeText =
+        isYes
+          ? "❤️ Haan"
+          : "🥺 Thoda time";
+
+
+      card.innerHTML = `
+
+        <div class="response-top">
+
+          <span
+            class="response-badge ${badgeClass}"
+          >
+            ${badgeText}
+          </span>
+
+          <span class="response-number">
+            #${index + 1}
+          </span>
+
+        </div>
+
+
+        <p class="response-date">
+          ${formatDate(item.createdAt)}
+        </p>
+
+      `;
+
+
+      return card;
+
+    }
+
+
+    async function loadResponses() {
+
+      try {
+
+        const result =
+          await fetch(API_URL);
+
+
+        if (!result.ok) {
+
+          throw new Error(
+            `Server returned ${result.status}`
+          );
+
+        }
+
+
+        const data =
+          await result.json();
+
+
+        if (!data.success) {
+
+          throw new Error(
+            "API returned an error"
+          );
+
+        }
+
+
+        const responses =
+          data.responses || [];
+
+
+        totalCount.textContent =
+          responses.length;
+
+
+        if (responses.length === 0) {
+
+          latestResponse.textContent =
+            "—";
+
+          responsesContainer.innerHTML = `
+
+            <div class="response-empty">
+              Abhi koi response nahi hai.
+            </div>
+
+          `;
+
+          return;
+
+        }
+
+
+        const latest =
+          responses[
+            responses.length - 1
+          ];
+
+
+        latestResponse.textContent =
+          latest.response === "Haan"
+            ? "❤️"
+            : "🥺";
+
+
+        responsesContainer.innerHTML = "";
+
+
+        [...responses]
+          .reverse()
+          .forEach(
+            (item, reversedIndex) => {
+
+              const originalIndex =
+                responses.length -
+                reversedIndex -
+                1;
+
+
+              responsesContainer.appendChild(
+
+                createResponseCard(
+                  item,
+                  originalIndex
+                )
+
+              );
+
+            }
+          );
+
+
+      } catch (error) {
+
+        console.error(
+          "Dashboard error:",
+          error
+        );
+
+
+        responsesContainer.innerHTML = `
+
+          <div class="error">
+
+            Dashboard response load nahi kar paaya.
+
+            <br><br>
+
+            Make sure SORRY-JANVI backend
+            server running hai.
+
+          </div>
+
+        `;
+
+      }
+
+    }
+
+
+    loadResponses();
+
+  </script>
+
+</body>
+
+</html>
