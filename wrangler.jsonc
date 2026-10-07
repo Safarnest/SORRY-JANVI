@@ -1,7 +1,16 @@
 {
   "name": "sorry-janvi",
+  "main": "worker.js",
   "compatibility_date": "2026-10-07",
   "assets": {
-    "directory": "./site"
-  }
+    "directory": "./site",
+    "binding": "ASSETS"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "sorry-janvi-db",
+      "database_id": "29fd27e0-b6d9-46b6-baaa-82c07da090e4"
+    }
+  ]
 }
